@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <button>CE</button>
+    <button>,</button>
+    <button>$</button>
+    <button>€</button>
+    <button>¥</button>
+    <button>=</button>
+  </div>
+</template>
