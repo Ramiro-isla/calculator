@@ -9,7 +9,7 @@
     <button>¥</button>
     <button>=</button>
   </div>
-  <div>
+  <div id="cd">
     <button id="7">7</button>
     <button id="8">8</button>
     <button id="9">9</button>
@@ -21,7 +21,7 @@
     <button id="3">3</button>
     <button id="0">0</button>
   </div>
-  <div>
+  <div id="dc">
     <button>+</button>
     <button>-</button>
     <button>*</button>
@@ -29,4 +29,6 @@
   </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+
+</style>
