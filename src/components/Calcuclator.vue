@@ -1,12 +1,25 @@
-<script></script>
+<script setup>
+let result = " ";
+function clear(){
+ result = " ";
+ function dot(){
+  if (result.indexOf(",") === -1){
+
+  }
+ }
+ let a = "a";
+function dollar(){
+  this.result = `${a}$`;
+}
+</script>
 
 <template>
   <div id="calculator">
-    <div id="screen">10000000</div>
+    <div id="screen">{{ result || "0" }}</div>
     <div id="function_buttons">
-      <button>CE</button>
+      <button @click="clear" >CE</button>
       <button>,</button>
-      <button>$</button>
+      <button @click="dollar()">$</button>
       <button>€</button>
       <button>¥</button>
       <button>=</button>
