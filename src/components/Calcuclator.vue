@@ -1,15 +1,29 @@
 <script setup>
-let result = " ";
-function clear(){
- result = " ";
- function dot(){
-  if (result.indexOf(",") === -1){
+import { ref } from "vue";
 
+let result = ref("8");
+let a = "a";
+function clear() {
+  result = " ";
+}
+function dot() {
+  if (this.result.indexOf(",") === -1) {
   }
- }
- let a = "a";
-function dollar(){
-  this.result = `${a}$`;
+}
+function dollar() {
+  if (this.result.indexOf("$") === -1) {
+    this.result = `${this.result}$`;
+  }
+}
+function euro() {
+  if (this.result.indexOf("€") === -1) {
+    this.result = `${this.result}€`;
+  }
+}
+function yen() {
+  if (this.result.indexOf("¥") === -1) {
+    this.result = `${this.result}¥`;
+  }
 }
 </script>
 
@@ -17,11 +31,11 @@ function dollar(){
   <div id="calculator">
     <div id="screen">{{ result || "0" }}</div>
     <div id="function_buttons">
-      <button @click="clear" >CE</button>
+      <button @click="clear()">CE</button>
       <button>,</button>
       <button @click="dollar()">$</button>
-      <button>€</button>
-      <button>¥</button>
+      <button @click="euro()">€</button>
+      <button @click="yen()">¥</button>
       <button>=</button>
     </div>
     <div id="operator_buttons">
