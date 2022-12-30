@@ -3,13 +3,7 @@ import Calculator from "./components/Calcuclator.vue";
 </script>
 
 <template>
-    <div id="calculator">
-        <div id="screen"></div>
-        <div id="keyboard"></div>
-    </div>
-    <Calculator/>
+  <Calculator />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
