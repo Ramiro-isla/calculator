@@ -1,42 +1,60 @@
 <script setup>
 import { ref } from "vue";
-
-let result = ref("8");
+let previous;
+let result = ref("");
 let operator;
-let resultPrevius;
+let operatorClicked = false;
+
 function clear() {
-  result = " ";
+  this.result = "";
 }
 function dot() {
-  if (this.result.indexOf(",") === -1) {
+  if (this.result.indexOf(".") === -1) {
+    this.number(".");
   }
 }
 function dollar() {
-  if (this.result.indexOf("$") === -1) {
-    this.result = `${this.result}$`;
-  }
+  this.result = `${this.result}$`;
 }
 function euro() {
-  if (this.result.indexOf("€") === -1) {
-    this.result = `${this.result}€`;
-  }
+  this.result = `${this.result}€`;
 }
 function yen() {
-  if (this.result.indexOf("¥") === -1) {
-    this.result = `${this.result}¥`;
+  this.result = `${this.result}¥`;
+}
+function equal() {
+  this.result = `${operator(parseFloat(this.result), parseFloat(previous))}`;
+  previous = null;
+}
+
+function number(number) {
+  if (operatorClicked) {
+    this.result = "";
+
+    operatorClicked = false;
   }
+  this.result = `${this.result}${number}`;
 }
 
-function equal(){
-  this.result = `${this.operator(parseFloat(this.result),parseFloat(this.resultPrevius))}` ; this.resultPrevius = null;
+function setPrevious() {
+  previous = this.result;
+  operatorClicked = true;
 }
-
-function number(number){
-  this.result = `${this.result}${number}`
+function sum() {
+  operator = (num1, num2) => num1 + num2;
+  this.setPrevious();
 }
-
-function sum(){
-
+function substract() {
+  operator = (num1, num2) => num1 - num2;
+  this.setPrevious();
+}
+function multiplication() {
+  operator = (num1, num2) => num1 * num2;
+  this.setPrevious();
+}
+function division() {
+  operator = (num1, num2) => num1 / num2;
+  this.setPrevious();
 }
 </script>
 
@@ -45,11 +63,11 @@ function sum(){
     <div id="screen">{{ result || "0" }}</div>
     <div id="function_buttons">
       <button @click="clear()">CE</button>
-      <button>,</button>
+      <button @click="dot()">,</button>
       <button @click="dollar()">$</button>
       <button @click="euro()">€</button>
       <button @click="yen()">¥</button>
-      <button>=</button>
+      <button @click="equal()">=</button>
     </div>
     <div id="operator_buttons">
       <div id="number_buttons">
@@ -65,10 +83,10 @@ function sum(){
         <button @click="number('0')" id="zero">0</button>
       </div>
       <div id="action_buttons">
-        <button>+</button>
-        <button>-</button>
-        <button>x</button>
-        <button>÷</button>
+        <button @click="sum()">+</button>
+        <button @click="substract()">-</button>
+        <button @click="multiplication()">x</button>
+        <button @click="division()">÷</button>
       </div>
     </div>
   </div>
