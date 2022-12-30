@@ -1,0 +1,11 @@
+#screen {
+  width: 27%;
+  border: 1px solid $screen_background;
+  height: 9rem;
+  background-color: $screen_background;
+  font-size: 3em;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+  color: whitesmoke;
+}
