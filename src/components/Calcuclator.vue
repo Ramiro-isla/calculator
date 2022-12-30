@@ -2,7 +2,8 @@
 import { ref } from "vue";
 
 let result = ref("8");
-let a = "a";
+let operator;
+let resultPrevius;
 function clear() {
   result = " ";
 }
@@ -25,6 +26,18 @@ function yen() {
     this.result = `${this.result}¥`;
   }
 }
+
+function equal(){
+  this.result = `${this.operator(parseFloat(this.result),parseFloat(this.resultPrevius))}` ; this.resultPrevius = null;
+}
+
+function number(number){
+  this.result = `${this.result}${number}`
+}
+
+function sum(){
+
+}
 </script>
 
 <template>
@@ -40,16 +53,16 @@ function yen() {
     </div>
     <div id="operator_buttons">
       <div id="number_buttons">
-        <button id="7">7</button>
-        <button id="8">8</button>
-        <button id="9">9</button>
-        <button id="4">4</button>
-        <button id="5">5</button>
-        <button id="6">6</button>
-        <button id="1">1</button>
-        <button id="2">2</button>
-        <button id="3">3</button>
-        <button id="zero">0</button>
+        <button @click="number('7')" id="7">7</button>
+        <button @click="number('8')" id="8">8</button>
+        <button @click="number('9')" id="9">9</button>
+        <button @click="number('4')" id="4">4</button>
+        <button @click="number('5')" id="5">5</button>
+        <button @click="number('6')" id="6">6</button>
+        <button @click="number('1')" id="1">1</button>
+        <button @click="number('2')" id="2">2</button>
+        <button @click="number('3')" id="3">3</button>
+        <button @click="number('0')" id="zero">0</button>
       </div>
       <div id="action_buttons">
         <button>+</button>
