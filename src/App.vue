@@ -1,4 +1,5 @@
 <script setup>
+import Calculator from "./components/Calcuclator.vue";
 </script>
 
 <template>
@@ -6,7 +7,7 @@
         <div id="screen"></div>
         <div id="keyboard"></div>
     </div>
-    <ButtonsNumber/>
+    <Calculator/>
 </template>
 
 <style scoped>

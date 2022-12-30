@@ -1,7 +1,15 @@
-<script>
-</script>
+<script></script>
 
 <template>
+  <div>
+    <button>CE</button>
+    <button>,</button>
+    <button>$</button>
+    <button>€</button>
+    <button>¥</button>
+    <button>=</button>
+  </div>
+  <div>
     <button id="7">7</button>
     <button id="8">8</button>
     <button id="9">9</button>
@@ -12,12 +20,13 @@
     <button id="2">2</button>
     <button id="3">3</button>
     <button id="0">0</button>
+  </div>
+  <div>
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>÷</button>
+  </div>
 </template>
 
-<style>
-button{
-    background-color: cornsilk;
-    border-color: black;
-    
-}
-</style>
+<style></style>
