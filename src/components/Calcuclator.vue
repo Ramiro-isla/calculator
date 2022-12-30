@@ -1,6 +1,7 @@
 <script></script>
 
 <template>
+ <div id="calculator"> 
   <div>
     <button>CE</button>
     <button>,</button>
@@ -21,14 +22,18 @@
     <button id="3">3</button>
     <button id="0">0</button>
   </div>
-  <div id="dc">
+  <div id="ButtonsAction">
     <button>+</button>
     <button>-</button>
-    <button>*</button>
+    <button>x</button>
     <button>÷</button>
   </div>
+ </div>
 </template>
 
 <style lang="scss" scoped>
+@import "../sass/mixin.scss";
+@import "../sass/variables";
+ @import "../sass/ButtonsAction.scss";
 
 </style>
