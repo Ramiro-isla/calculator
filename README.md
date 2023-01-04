@@ -1,35 +1,41 @@
-# calculator
+<h1>Calculadora</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h3> Contexto del proyecto</h3>
 
-## Recommended IDE Setup
+<h4>Requisitos mínimos Calculadora:</h4>
+<ul>
+<li>Mobil First</li>
+<li>La calculadora deberá poder realizar las operaciones básicas: suma, resta</li>
+<li>multiplica, división</li>
+</ul>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<h4>Teclas obligatorias:</h4>
+<ul>
+<li>númericas del 0 al 9</li>
+<li>suma, resta, multiplicar, división</li>
+<li>signo "igual"</li>
+<li>signo "." para la coma</li>
+<li>CE (para resetear)</li>
+</ul>
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+<h3>Lenguajes y herramientas utilazados:</h3>
+<h4>Lenguajes:</h4>
+<ul>
+    <li>HTML</li>
+    <li>SASS</li>
+    <li>JS</li>
+    <li>VUE3</li>
+</ul>
+<h4>Herramientas:</h4>
+<ul>
+    <li><a href="https://www.figma.com/file/SvO6PhYOnT7tyQKjsFVTFT/Calculator-with-Currency-Converter?node-id=7%3A14&t=6FwPJRV7GaGJGJvk-0">Figma</a></li>
+    <li>Visual Studio Code</li>
+    <li>GitHub</li>
+    <li>VUE3</li>
+</ul>
+ 
+ <h4>EQUIPO</h4>
+ <ul>
+    <li>@Ramiro-isla</li>
+    <li>@Vitoria-Oli</li>
+</ul>
