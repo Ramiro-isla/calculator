@@ -1,0 +1,10 @@
+#function_buttons {
+    border: 1px solid black;
+    border-bottom: none;
+    width: 27%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  button {
+    @include buttons($yellow_buttons);
+  }
+}

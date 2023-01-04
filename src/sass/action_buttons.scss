@@ -1,0 +1,12 @@
+#action_buttons {
+  border: 1px solid black;
+  width: 6.94%;
+  display: grid;
+  justify-items: center;
+  button {
+    @include buttons($yellow_buttons);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+}

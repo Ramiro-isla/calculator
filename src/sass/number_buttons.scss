@@ -1,0 +1,14 @@
+#number_buttons {
+    border: 1px solid black;
+    border-right: none;
+    width: 20%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    #zero {
+      grid-column: 2/3;
+    }
+    button {
+      @include buttons($number_buttons);
+    }
+  }
