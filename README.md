@@ -36,6 +36,6 @@
  
  <h4>EQUIPO</h4>
  <ul>
-    <li>@Ramiro-isla</li>
-    <li>@Vitoria-Oli</li>
+    <li><a href="https://github.com/Ramiro-isla">@Ramiro-isla</a></li>
+    <li><a href="https://github.com/Vitoria-Oli">@Vitoria-Oli</a></li>
 </ul>
